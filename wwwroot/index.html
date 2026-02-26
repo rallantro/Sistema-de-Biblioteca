@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca Juvia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="tittle">
+        <h1>Sistema de livros da Academia Juvia</h1>
+        <h2>Bem-vindo ao Sistema da Biblioteca</h2>
+    </div>
+
+    
+    <form onsubmit="porNome(event)">
+        <div id="livroNome">
+            <div>
+                <p>Pesquisar Livro pelo Nome:</p>
+                <input type="text" id="name" placeholder="Digite o nome do Livro" required>
+                <button type="submit">Pesquisar</button>
+            </div>
+            <div>Resultados:
+            <div id="resultado" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
+            </div>
+        </div>
+    </form>
+
+     <form onsubmit="porAutor(event)">
+        <div id="livroAutor">
+            <div>
+                <p>Pesquisar livros pelo Autor:</p>
+                <input type="text" id="autorName" placeholder="Digite o nome do Autor" required>
+                <button type="submit">Pesquisar</button>
+            </div>
+            <div>Resultados:
+            <div id="resultadoAutor" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

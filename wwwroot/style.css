@@ -1,0 +1,9 @@
+.tittle {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
