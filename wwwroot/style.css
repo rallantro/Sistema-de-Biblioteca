@@ -2,8 +2,21 @@
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
     text-align: center;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 auto;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cadastro{
+    display:flex;
+    flex-direction: column;
+    justify-items: left;
+    width: 40%;
+    gap: 10px;
 }

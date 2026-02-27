@@ -157,4 +157,7 @@ D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sis
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sistema de Biblioteca - C#.genruntimeconfig.cache
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\ref\Sistema de Biblioteca - C#.dll
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Sistema de Biblioteca - C#.staticwebassets.runtime.json
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\n3ous7yf8e-{0}-9dxmthyplf-9dxmthyplf.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sistema de Biblioteca - C#.sourcelink.json
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\n3ous7yf8e-{0}-xan2l596hj-xan2l596hj.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\jjdzby25hj-{0}-k6tha3xssx-k6tha3xssx.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\89knarrru1-{0}-7daddtd4m1-7daddtd4m1.gz
