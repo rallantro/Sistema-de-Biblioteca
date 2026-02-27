@@ -68,13 +68,13 @@ namespace Sistema_de_Biblioteca___C_.Controllers
 
             if (_context.livros.Any(x => x.nome.Contains(livroNovo.nome)))
             {
-                return Conflict("Esse livro já foi cadastrado!");
+                return Conflict();
             }
 
             _context.Add(livroNovo);
             _context.SaveChanges();
 
-            return Ok("Livro Cadastrado com sucesso!");
+            return Ok();
         }
 
         [HttpPut]
@@ -84,7 +84,7 @@ namespace Sistema_de_Biblioteca___C_.Controllers
 
             if (livro == null)
             {
-                return NotFound("Este Id não foi registrado.");
+                return NotFound();
             }
 
             livro.nome = livronovo.nome;
@@ -94,7 +94,23 @@ namespace Sistema_de_Biblioteca___C_.Controllers
             _context.Update(livro);
             _context.SaveChanges();
 
-            return Ok("Livro Atualizado com Sucesso");
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult delete(int id)
+        {
+            
+            var livro = _context.livros.Find(id);
+
+            if (livro == null)
+            {
+                return NotFound();
+            }
+            _context.Remove(livro);
+            _context.SaveChanges();
+
+            return NoContent();
         }
 
     }

@@ -88,6 +88,21 @@
         </div>
     </section>
 
+    <section id="deletar">
+        <div>
+            <h3>Deletar o Cadastro de um Livro</h3>
+            <form onsubmit="deletar(event)">
+            <div id="livroDel">
+                <div>
+                    <p>Digite o número do ID:<input id="idDel" type="number" placeholder="0" required onchange="confirmID(this)"></p>   
+                     <div id="demDel" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
+                    <button type="submit">Deletar</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </section>
+
 
 </body>
 </html>

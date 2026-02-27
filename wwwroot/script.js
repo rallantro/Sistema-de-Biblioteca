@@ -200,3 +200,44 @@ function atualizar (event){
     })
 
 }
+
+function confirmID(element){
+    const display = document.getElementById('demDel');
+
+     fetch(`/Livros/porId/${element.value}`) 
+        .then(response => {
+            if (response.status == 404)
+            alert("Não há nenhum livro com esse id.");
+            if (!response.ok) throw new Error("Erro na rede");
+            return response.json();
+        })
+        .then(livro => {
+            display.innerHTML = `
+                        <div style="border: 1px solid black; margin: 10px; padding: 10px; width: 50%">
+                            <p><strong>Nome:</strong> ${livro.Nome}</p>
+                            <p><strong>Descrição:</strong> ${livro.Descricao}</p>
+                            <p><strong>Autor:</strong> ${livro.Autor}</p>
+                        </div>
+                    `;
+        })
+}
+
+function deletar(event){
+    event.preventDefault();
+    const id = document.getElementById('idDel');
+
+    if(window.confirm("Deseja realmente deletar esse livro da base de dados da biblioteca? (Essa ação é irreversível)")){
+        fetch(`/Livros/${id.value}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json' 
+            },
+            body: JSON.stringify(id.value)
+        })
+        .then(response =>{
+            if (response.status == "NoContent") 
+                alert("Livro excluído com sucesso!");
+        })
+    }
+
+}
