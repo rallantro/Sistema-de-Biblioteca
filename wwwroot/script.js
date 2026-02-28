@@ -19,16 +19,16 @@ function porNome(event){
             })
             .then(dados => {
                 let conteudo = "";
-
+                
                 dados.forEach(livro => {
                     conteudo += `
-                        <div style="border: 1px solid black; margin: 10px; padding: 10px; width: 50%">
+                        <div class="livroCard">
                             <p><strong>Nome:</strong> ${livro.Nome}</p>
                             <p><strong>Descrição:</strong> ${livro.Descricao}</p>
                             <p><strong>Autor:</strong> ${livro.Autor}</p>
                         </div>
                     `;
-                });
+                }); 
 
                 display.innerHTML = conteudo;
                 console.log("Dados recebidos:", dados);
@@ -77,12 +77,12 @@ function buscarID(event){
 };
 
 function porAutor(event){
-        const displayAutor = document.getElementById('resultadoAutor');
-        const name = document.getElementById('autorName');
+        const displayAutor = document.getElementById('resultado');
+        const name = document.getElementById('name');
         event.preventDefault();
 
         if(name.value == "") 
-            document.getElementById('autorName').focus();
+            document.getElementById('name').focus();
 
         fetch(`/Livros/autor/${name.value}`) 
             .then(response => {
@@ -97,7 +97,7 @@ function porAutor(event){
                 dados.forEach(livro => {
                 
                     conteudo += `
-                        <div style="border: 1px solid black; margin: 10px; padding: 10px; width: 50%">
+                        <div class="livroCard">
                             <p><strong>Nome:</strong> ${livro.Nome}</p>
                             <p><strong>Descrição:</strong> ${livro.Descricao}</p>
                             <p><strong>Autor:</strong> ${livro.Autor}</p>
@@ -213,7 +213,7 @@ function confirmID(element){
         })
         .then(livro => {
             display.innerHTML = `
-                        <div style="border: 1px solid black; margin: 10px; padding: 10px; width: 50%">
+                        <div class="livroCard">
                             <p><strong>Nome:</strong> ${livro.Nome}</p>
                             <p><strong>Descrição:</strong> ${livro.Descricao}</p>
                             <p><strong>Autor:</strong> ${livro.Autor}</p>
@@ -235,9 +235,29 @@ function deletar(event){
             body: JSON.stringify(id.value)
         })
         .then(response =>{
-            if (response.status == "NoContent") 
+            if (response.status == 204) 
                 alert("Livro excluído com sucesso!");
+            event.target.reset();
         })
     }
 
+}
+
+function trocarSearch(element){
+    const form = document.getElementById("formSearch");
+    const name = document.getElementById("name");
+       if (element.value == "Autor"){
+            name.placeholder = "Digite o nome do autor";
+        }else {
+            name.placeholder = "Digite o nome do livro";
+        } 
+
+    form.onsubmit = function(event){
+        if (element.value == "Autor"){
+            porAutor(event);
+        }else {
+            porNome(event);
+        }
+    }
+        
 }

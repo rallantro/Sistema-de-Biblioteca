@@ -10,99 +10,26 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="tittle">
-        <h1>Sistema de livros da Academia Juvia</h1>
-        <h2>Bem-vindo ao Sistema da Biblioteca</h2>
+    <div class="inicial">
+        <div class="title">
+            <h1 style="color: #d1313d;">Sistema de livros da Academia Juvia</h1>
+            <h2 style="color: #8eb2c5;">Bem-vindo ao Sistema da Biblioteca</h2>
+            <div class="menu">
+            <p><b>Qual sessão deseja iniciar?</b></p>
+            <div style="display: flex; gap: 5px;">
+                <a class="card" href="public.html">
+                    <h4><b>Pública</b></h4> 
+                    <p>Sessão para verificar os livros presentes no sistema da biblioteca.</p>
+                    <button class="button">Entrar</button>
+                </a>
+                <a class="card" href="admin.html">
+                    <h4><b>Administração</b></h4> 
+                    <p>Sessão para manutenção dos livros presentes no sistema da biblioteca.</p>
+                    <button class="button">Entrar</button>
+                </a>
+            </div>
+        </div>
+        </div>
     </div>
-
-    <section id="pesquisaNome">
-        <form onsubmit="porNome(event)">
-            <div id="livroNome">
-                <div>
-                    <p>Pesquisar Livro pelo Nome:</p>
-                    <input type="text" id="name" placeholder="Digite o nome do Livro" required>
-                    <button type="submit">Pesquisar</button>
-                </div>
-                <div>Resultados:
-                <div id="resultado" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
-                </div>
-            </div>
-        </form>
-    </section>
-    <section id="pesquisaAutor">
-        <form onsubmit="porAutor(event)">
-            <div id="livroAutor">
-                <div>
-                    <p>Pesquisar livros pelo Autor:</p>
-                    <input type="text" id="autorName" placeholder="Digite o nome do Autor" required>
-                    <button type="submit">Pesquisar</button>
-                </div>
-                <div>Resultados:
-                <div id="resultadoAutor" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
-                </div>
-            </div>
-        </form>
-    </section>
-
-    <section id="pesquisarID">
-        <form onsubmit="buscarID(event)">
-            <div id="livroId">
-                <div>
-                    <p>Verificar o ID de um livro pelo nome:</p>
-                    <input type="text" id="idName" placeholder="Digite o nome do Livro" required>
-                    <button type="submit">Pesquisar</button>
-                </div>
-                <div>Resultados:
-                <div id="resultadoId" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
-                </div>
-            </div>
-        </form>
-    </section>
-
-    <section id="cadastrar">
-        <div>
-            <h3>Cadastrar Livro</h3>
-            <form onsubmit="cadastrar(event)">
-                <div class="cadastro">
-                <input id="title" type="text" placeholder="Digite o título do Livro" required>
-                <textarea id="desc" placeholder="Digite uma descrição do Livro" required style="resize: none;"></textarea>
-                <input id="nomeAutor" type="text" placeholder="Digite o nome do Autor" required>
-                <button type="submit">Cadastrar</button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <section id="atualizar">
-        <div>
-            <h3>Atualizar Cadastro de um Livro</h3>
-            <form onsubmit="atualizar(event)">
-                <div class="cadastro">
-                <p>Digite o número do ID:<input id="idOld" type="number" placeholder="0" required onchange="checkID(this)"></p>   
-                <input id="titleNew" type="text" placeholder="Digite o novo título do Livro" required>
-                <textarea id="descNew" placeholder="Digite uma nova descrição do Livro" required style="resize: none;"></textarea>
-                <input id="nomeAutorNew" type="text" placeholder="Digite o nome novo do Autor" required>
-                <button type="submit">Atualizar</button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <section id="deletar">
-        <div>
-            <h3>Deletar o Cadastro de um Livro</h3>
-            <form onsubmit="deletar(event)">
-            <div id="livroDel">
-                <div>
-                    <p>Digite o número do ID:<input id="idDel" type="number" placeholder="0" required onchange="confirmID(this)"></p>   
-                     <div id="demDel" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
-                    <button type="submit">Deletar</button>
-                </div>
-            </div>
-        </form>
-        </div>
-    </section>
-
-
 </body>
 </html>

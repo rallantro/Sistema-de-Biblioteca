@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca Juvia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="title">
+        <h1>Sistema de livros da Academia Juvia</h1>
+        <h2>Bem-vindo Administrador</h2>
+        <a href="index.html"><button>Voltar</button></a>
+    </div>
+    <section id="pesquisarID">
+        <form onsubmit="buscarID(event)">
+            <div id="livroId">
+                <div>
+                    <p>Verificar o ID de um livro pelo nome:</p>
+                    <input type="text" id="idName" placeholder="Digite o nome do Livro" required>
+                    <button type="submit">Pesquisar</button>
+                </div>
+                <div>Resultados:
+                <div id="resultadoId" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <section id="cadastrar">
+        <div>
+            <h3>Cadastrar Livro</h3>
+            <form onsubmit="cadastrar(event)">
+                <div class="cadastro">
+                <input id="title" type="text" placeholder="Digite o título do Livro" required>
+                <textarea id="desc" placeholder="Digite uma descrição do Livro" required style="resize: none;"></textarea>
+                <input id="nomeAutor" type="text" placeholder="Digite o nome do Autor" required>
+                <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="atualizar">
+        <div>
+            <h3>Atualizar Cadastro de um Livro</h3>
+            <form onsubmit="atualizar(event)">
+                <div class="cadastro">
+                <p>Digite o número do ID:<input id="idOld" type="number" placeholder="0" required onchange="checkID(this)"></p>   
+                <input id="titleNew" type="text" placeholder="Digite o novo título do Livro" required>
+                <textarea id="descNew" placeholder="Digite uma nova descrição do Livro" required style="resize: none;"></textarea>
+                <input id="nomeAutorNew" type="text" placeholder="Digite o nome novo do Autor" required>
+                <button type="submit">Atualizar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="deletar">
+        <div>
+            <h3>Deletar o Cadastro de um Livro</h3>
+            <form onsubmit="deletar(event)">
+            <div id="livroDel">
+                <div>
+                    <p>Digite o número do ID:<input id="idDel" type="number" placeholder="0" required onchange="confirmID(this)"></p>   
+                     <div id="demDel" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
+                    <button type="submit">Deletar</button>
+                </div>
+            </div>
+        </form>
+        </div>
+    </section>
+
+
+</body>
+</html>

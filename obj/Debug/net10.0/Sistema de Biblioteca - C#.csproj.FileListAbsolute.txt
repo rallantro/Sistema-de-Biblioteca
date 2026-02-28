@@ -158,6 +158,9 @@ D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sis
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\ref\Sistema de Biblioteca - C#.dll
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Sistema de Biblioteca - C#.staticwebassets.runtime.json
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sistema de Biblioteca - C#.sourcelink.json
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\jjdzby25hj-{0}-k6tha3xssx-k6tha3xssx.gz
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\n3ous7yf8e-{0}-knrlbffy7y-knrlbffy7y.gz
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\89knarrru1-{0}-lhezufi6hj-lhezufi6hj.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\qbmkvjoeat-{0}-o99qzc5aqy-o99qzc5aqy.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\n3ous7yf8e-{0}-9dqutephhe-9dqutephhe.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\4pnrv8g11o-{0}-5ipweew5fc-5ipweew5fc.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\b8vkn0xyfv-{0}-5q4zikjmjy-5q4zikjmjy.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\89knarrru1-{0}-pauos1rqts-pauos1rqts.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\jjdzby25hj-{0}-jg48m5ttr5-jg48m5ttr5.gz
