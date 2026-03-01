@@ -7,30 +7,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="admin.js" defer></script>
 </head>
 <body>
     <div class="title">
-        <h1>Sistema de livros da Academia Juvia</h1>
-        <h2>Bem-vindo Administrador</h2>
-        <a href="index.html"><button>Voltar</button></a>
+        <h1  style="color: #d1313d;">Sistema de livros da Academia Juvia</h1>
+        <h2 style="color: #8eb2c5;">Bem-vindo ao Sistema da Biblioteca</h2>
+        <a href="index.html"><button class="returnB">⬅</button></a>
     </div>
-    <section id="pesquisarID">
+
+    <section class="menuLateral">
+        <h2>Menu ⚙️</h2>
+        <ul>
+            <a id="idButton" onclick="showID()"><li>Pesquisar Id</li></a>
+            <a id="cadButton" onclick="showCad()"><li>Cadastrar Livro</li></a>
+            <a id="attButton" onclick="showAtt()"><li>Atualizar Livro</li></a>
+            <a id="delButton" onclick="showDel()"><li>Deletar Livro</li></a>
+        </ul>
+    </section>
+
+    <section class="pesquisarID" id="pesquisarID">
         <form onsubmit="buscarID(event)">
             <div id="livroId">
-                <div>
+                <div class="searchId">
                     <p>Verificar o ID de um livro pelo nome:</p>
                     <input type="text" id="idName" placeholder="Digite o nome do Livro" required>
                     <button type="submit">Pesquisar</button>
                 </div>
                 <div>Resultados:
-                <div id="resultadoId" style="display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px;"></div>
+                 <div id="resultadoId" style="border-top: 5px solid #d1313d; display:grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 10px;"></div>
                 </div>
             </div>
         </form>
     </section>
 
-    <section id="cadastrar">
+    <section class="menuCadastro" id="cadastrar">
         <div>
             <h3>Cadastrar Livro</h3>
             <form onsubmit="cadastrar(event)">
@@ -44,7 +55,7 @@
         </div>
     </section>
 
-    <section id="atualizar">
+    <section class="menuAtualiza" id="atualizar">
         <div>
             <h3>Atualizar Cadastro de um Livro</h3>
             <form onsubmit="atualizar(event)">
@@ -59,7 +70,7 @@
         </div>
     </section>
 
-    <section id="deletar">
+    <section class="menuDel" id="deletar">
         <div>
             <h3>Deletar o Cadastro de um Livro</h3>
             <form onsubmit="deletar(event)">

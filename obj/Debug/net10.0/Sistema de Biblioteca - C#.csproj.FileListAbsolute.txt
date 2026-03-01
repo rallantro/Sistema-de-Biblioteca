@@ -161,6 +161,6 @@ D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sis
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\qbmkvjoeat-{0}-o99qzc5aqy-o99qzc5aqy.gz
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\n3ous7yf8e-{0}-9dqutephhe-9dqutephhe.gz
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\4pnrv8g11o-{0}-5ipweew5fc-5ipweew5fc.gz
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\b8vkn0xyfv-{0}-5q4zikjmjy-5q4zikjmjy.gz
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\89knarrru1-{0}-pauos1rqts-pauos1rqts.gz
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\jjdzby25hj-{0}-jg48m5ttr5-jg48m5ttr5.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\b8vkn0xyfv-{0}-ju6tbviuli-ju6tbviuli.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\89knarrru1-{0}-q22bep6m01-q22bep6m01.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\jjdzby25hj-{0}-75vzynx9l9-75vzynx9l9.gz

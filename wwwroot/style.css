@@ -70,7 +70,7 @@
     border-left: 5px solid #d1313d;
     transition: 0.5s;
     animation-name: livroTran;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 }
 
 .livroCard:hover{
@@ -83,7 +83,7 @@
 }
 
 .returnB{
-    position: fixed;
+    position: absolute;
     top: 5%;
     left: 2%;
     font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
@@ -152,18 +152,18 @@
 }
 
 .searchForm{
-    display: grid;
-    position: relative;  
-    height: 100vh;  
+    position: relative;
+    min-height: 100vh;  
+    display: flex;
+    justify-content: center;
 }
 
 .form{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position:relative;
+    bottom: 0;
     width: 98%;
-    height: 98%;
+    height: auto;
+    min-height: 92%;
     border-radius: 10px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 4, 0.2);
@@ -172,6 +172,68 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;    
     background-color: whitesmoke;
+}
+
+.pesquisarID, .menuCadastro, .menuAtualiza, .menuDel {
+    display: none;
+    transition: 0.8s;
+}
+
+.menuLateral{
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 4, 0.5);
+    position: fixed;
+    text-align: center;
+    height: 100vh;
+    left: 0;
+    background-color: #615375;
+    color: white;
+    padding: 0;
+    margin: 0;
+    border-top-right-radius: 20px;
+    transition: 0.5s;
+    z-index: 99;
+}
+
+.menuLateral > ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 15px;
+}
+
+.menuLateral > ul > a > li {
+    font-size: 15px;
+    text-align: center;
+    padding: 15px;
+    border: 0.5px solid #8eb2c5;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.menuLateral > ul > a > li:hover {
+    transform: scale(1.05);
+    background-color: #8eb2c5;
+}
+
+.active{
+    border-radius: 10px;
+    background-color: #8eb2c5;
+}
+
+.menuLateral > ul > a{
+    text-decoration: none;
+}
+
+.pesquisarID {
+    display: inline;
+    position: relative;
+    left: 25%;
+    width: 50vw;
 }
 
 .cadastro{
