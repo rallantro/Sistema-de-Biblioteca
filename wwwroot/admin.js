@@ -10,7 +10,7 @@ function buscarID(event){
         fetch(`/Livros/id/${name.value}`) 
             .then(response => {
                 if (response.status == 404)
-                alert("Não há nenhum livro com esse id.");
+                alert("Não há nenhum livro com esse nome na base de dados.");
                 if (!response.ok) throw new Error("Erro na rede");
                 return response.json();
             })
@@ -99,7 +99,8 @@ function confirmID(element){
         })
         .then(livro => {
             display.innerHTML = `
-                        <div class="livroCard">
+                            <div class="livroCardDel">
+                            <p style="text-align: center; color: #d1313d; font-weight: bold;">Livro selecionado para a exclusão:</p>
                             <p><strong>Nome:</strong> ${livro.Nome}</p>
                             <p><strong>Descrição:</strong> ${livro.Descricao}</p>
                             <p><strong>Autor:</strong> ${livro.Autor}</p>
@@ -108,8 +109,46 @@ function confirmID(element){
         })
 }
 
-function deletar(event){
+function cadastrar (event){
+
+    const novoLivro = {
+        Nome: document.getElementById('title').value,
+        Descricao: document.getElementById('desc').value,
+        Autor: document.getElementById('nomeAutor').value
+    };
+
+
     event.preventDefault();
+
+    fetch('/Livros', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(novoLivro)
+    })
+    .then(response =>{
+        if (response.ok) 
+            alert("Livro Cadastrado com sucesso!");
+        
+        if (response.status == 409)
+            alert("Esse livro já foi Cadastrado!");
+            throw new Error("Erro na rede");
+    })
+    .then(dados => {
+        console.log("Resposta do servidor:", dados);
+        
+        event.target.reset(); 
+    })
+    .catch(error => {
+        console.log(error)
+        return;
+    })
+
+}
+
+
+function deletar(){
     const id = document.getElementById('idDel');
 
     if(window.confirm("Deseja realmente deletar esse livro da base de dados da biblioteca? (Essa ação é irreversível)")){
@@ -118,22 +157,35 @@ function deletar(event){
             headers: {
                 'Content-Type': 'application/json' 
             },
-            body: JSON.stringify(id.value)
         })
         .then(response =>{
             if (response.status == 204) 
                 alert("Livro excluído com sucesso!");
-            event.target.reset();
+                window.location.reload();
         })
     }
 
 }
 
-function showID(){
+function hide(){
+    document.getElementById('mensagem').style.display = 'inline';
     document.getElementById("cadastrar").style.display = 'none';
     document.getElementById("atualizar").style.display = 'none';
     document.getElementById("deletar").style.display = 'none';
-    document.getElementById("pesquisarID").style.display = 'flex';
+    document.getElementById("pesquisarID").style.display = 'none';
+
+    document.getElementById("idButton").classList.remove('active');
+    document.getElementById("cadButton").classList.remove('active');
+    document.getElementById("attButton").classList.remove('active');
+    document.getElementById("delButton").classList.remove('active');
+}
+
+function showID(){
+    document.getElementById('mensagem').style.display = 'none';
+    document.getElementById("cadastrar").style.display = 'none';
+    document.getElementById("atualizar").style.display = 'none';
+    document.getElementById("deletar").style.display = 'none';
+    document.getElementById("pesquisarID").style.display = 'inline';
 
     document.getElementById("idButton").classList.add('active');
     document.getElementById("cadButton").classList.remove('active');
@@ -142,7 +194,8 @@ function showID(){
 }
 
 function showCad(){
-    document.getElementById("cadastrar").style.display = 'flex';
+    document.getElementById('mensagem').style.display = 'none';
+    document.getElementById("cadastrar").style.display = 'grid';
     document.getElementById("atualizar").style.display = 'none';
     document.getElementById("deletar").style.display = 'none';
     document.getElementById("pesquisarID").style.display = 'none';
@@ -154,8 +207,9 @@ function showCad(){
 }
 
 function showAtt(){
+    document.getElementById('mensagem').style.display = 'none';
     document.getElementById("cadastrar").style.display = 'none';
-    document.getElementById("atualizar").style.display = 'flex';
+    document.getElementById("atualizar").style.display = 'grid';
     document.getElementById("deletar").style.display = 'none';
     document.getElementById("pesquisarID").style.display = 'none';
 
@@ -166,9 +220,10 @@ function showAtt(){
 }
 
 function showDel(){
+    document.getElementById('mensagem').style.display = 'none';
     document.getElementById("cadastrar").style.display = 'none';
     document.getElementById("atualizar").style.display = 'none';
-    document.getElementById("deletar").style.display = 'flex';
+    document.getElementById("deletar").style.display = 'grid';
     document.getElementById("pesquisarID").style.display = 'none';
 
     document.getElementById("idButton").classList.remove('active');

@@ -11,8 +11,11 @@ function porNome(event){
         }
         fetch(`/Livros/nome/${name.value}`) 
             .then(response => {
-                if (response.status == 404)
-                alert("Não há nenhum livro com esse nome.");
+                if (response.status == 404){
+                    alert("Não há nenhum livro com esse nome.");
+                    throw new Error("Erro na rede");
+                }
+                
                 if (!response.ok) throw new Error("Erro na rede");
                 return response.json();
                 
@@ -48,8 +51,11 @@ function porAutor(event){
 
         fetch(`/Livros/autor/${name.value}`) 
             .then(response => {
-                if (response.status == 404)
-                alert("Não há nenhum livro com esse autor.");
+                if (response.status == 404){
+                    alert("Não há nenhum livro com esse autor."); 
+                    throw new Error("Erro na rede");
+                }
+                
                 if (!response.ok) throw new Error("Erro na rede");
                 return response.json();
             })
@@ -74,43 +80,6 @@ function porAutor(event){
                 console.error("Erro ao acessar a API:", error);
             });
 };
-
-function cadastrar (event){
-
-    const novoLivro = {
-        Nome: document.getElementById('title').value,
-        Descricao: document.getElementById('desc').value,
-        Autor: document.getElementById('nomeAutor').value
-    };
-
-
-    event.preventDefault();
-
-    fetch('/Livros', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json' 
-        },
-        body: JSON.stringify(novoLivro)
-    })
-    .then(response =>{
-        if (response.ok) 
-            alert("Livro Cadastrado com sucesso!");
-        
-        if (response.status == 409)
-            alert("Esse livro já foi Cadastrado!");
-    })
-    .then(dados => {
-        console.log("Resposta do servidor:", dados);
-        
-        event.target.reset(); 
-    })
-    .catch(error => {
-        console.log(error)
-        return;
-    })
-
-}
 
 function trocarSearch(element){
     const form = document.getElementById("formSearch");

@@ -21,7 +21,7 @@ namespace Sistema_de_Biblioteca___C_.Controllers
         [HttpGet("id/{nome}")]
         public IActionResult ObterID(string nome)
         {
-            var livro = _context.livros.Where(x => x.nome.Contains(nome));
+            var livro = _context.livros.Where(x => x.nome.Contains(nome)).OrderBy(x => x.nome);
             
             if(livro.ToArray().Length == 0)
                 return NotFound();
@@ -43,7 +43,7 @@ namespace Sistema_de_Biblioteca___C_.Controllers
         [HttpGet("nome/{nome}")]
         public IActionResult ObterPorNome(string nome)
         {
-            var livro = _context.livros.Where(x => x.nome.Contains(nome));
+            var livro = _context.livros.Where(x => x.nome.Contains(nome)).OrderBy(x => x.nome);
             
             if(livro.ToArray().Length == 0)
                 return NotFound();
@@ -54,7 +54,7 @@ namespace Sistema_de_Biblioteca___C_.Controllers
         [HttpGet("autor/{nomeAutor}")]
         public IActionResult ObterPorAutor(string nomeAutor)
         {
-            var livro = _context.livros.Where(x => x.nomeAutor.Contains(nomeAutor));
+            var livro = _context.livros.Where(x => x.nomeAutor.Contains(nomeAutor)).OrderBy(x => x.nome);
             
             if(livro.ToArray().Length == 0)
                 return NotFound();
@@ -66,7 +66,7 @@ namespace Sistema_de_Biblioteca___C_.Controllers
         public IActionResult cadastrarLivro([FromBody] Livro livroNovo)
         {
 
-            if (_context.livros.Any(x => x.nome.Contains(livroNovo.nome)))
+            if (_context.livros.Any(x => x.nome.Trim() == livroNovo.nome.Trim()))
             {
                 return Conflict();
             }

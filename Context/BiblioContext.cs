@@ -15,5 +15,6 @@ namespace Sistema_de_Biblioteca___C_.Context
             
         }
         public DbSet<Livro> livros {get; set;}
+        public DbSet<User> users {get; set;}
     }
 }

@@ -14,6 +14,8 @@
     justify-content: center; 
     align-items: center;     
     height: 100vh;
+    animation-name: livroTran;
+    animation-duration: 0.5s;
 }
 
 .menu {
@@ -59,7 +61,8 @@
     box-shadow: 0 4px 20px 10px #f9bf76;
 }
 
-.livroCard {
+.livroCard, .livroCardDel {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-shadow: 0 0px 8px 0 #615375c4;
     background-color: white;
     text-decoration: none;
@@ -73,7 +76,17 @@
     animation-duration: 0.5s;
 }
 
-.livroCard:hover{
+.livroCardDel {
+    display: grid;
+    box-shadow: 0 0px 8px 0 #615375c4;
+    background-color: antiquewhite;
+    color: black;
+    width: 30vw;
+    height: 30vh;
+    margin: 15px;
+}
+
+.livroCard:hover, .livroCardDel:hover{
     transform: translateY(-5px)
 }
 
@@ -108,17 +121,24 @@
     justify-content: center;
     align-items: stretch;
     margin: 25px;
-    
     font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
     font-size: 15px;
+    animation-name: livroTran;
+    animation-duration: 1s;
 }
 
 .pesquisa > p {
     margin-right: 5px;
 }
 
-.pesquisa .dropdown:focus-within, .barra:focus-within, .button:focus-within{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 4, 0.2);
+.pesquisa .dropdown:focus-within, .barra:focus{
+    box-shadow: 0 0 8px 3px #8eb2c5;
+}
+
+.pesquisa .button:hover, .searchId .button:hover, .menuCadastro .button:hover, .menuAtualiza .button:hover{
+    background-color: #e5625c;
+    color: white;
+    box-shadow: 0 0 8px 3px #e5635caf;
 }
 
 
@@ -130,17 +150,19 @@
     border-bottom-left-radius: 5px;
     background: #8eb2c56c;
     padding: 2px;
+    transition: 0.7s;
 }
 
-.pesquisa .barra{
+.pesquisa .barra {
     font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
     font-size: 15px;
     border: none;
     background: #8eb2c53d;
-    width: 60%;
+    width: 60vw;
+    transition: 0.7s;
 }
 
-.pesquisa .button{
+.pesquisa .button, .searchId .button{
     font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
     font-size: 15px;
     background-color: #f9bf76;
@@ -149,6 +171,7 @@
     border-bottom-right-radius: 5px;
     cursor: pointer;
     padding: 5px;
+    transition: 0.4s;
 }
 
 .searchForm{
@@ -229,17 +252,202 @@ body{
     text-decoration: none;
 }
 
+.msgFundo {
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    color: #8eb2c5;
+    left: 25vw;
+    top: 43vh;
+    cursor:default;
+    user-select: none;
+    animation-name: livroTran;
+    animation-duration: 1s;
+}
+
+.waitMsg {
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    font-weight: bold;
+    color: #d1313d;
+    left: 5vw;
+    top: 25vh;
+    cursor:default;
+    user-select: none;
+    animation-name: livroTran;
+    animation-duration: 1.5s;
+}
+
+
+
 .pesquisarID {
-    display: inline;
     position: relative;
-    left: 25%;
+    left: 15vw;
+    margin: 15px;
+    width: 60vw;
+}
+
+.searchId{
+    display: flex;
+    align-items: stretch;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    margin: 10px;
+    animation-name: livroTran;
+    animation-duration: 0.5s;
+}
+
+.searchId > p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    margin-right: 5px;
+}
+
+.searchId .barra{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    font-size: 15px;
+    border: none;
+    background: #8eb2c53d;
+    width: 30vw;
+    transition: 0.7s;
+}
+
+.menuCadastro {
+    position: relative;
+    display: grid;
+    text-align: center;
+    left: 23vw;
+    top: 10vh;
     width: 50vw;
+    height: 50vh;
+    border-left: 20px solid #8eb2c5;
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 4, 0.5);
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    animation-name: livroTran;
+    animation-duration: 0.5s;
+}
+
+.menuAtualiza{
+    position: relative;
+    display: grid;
+    text-align: center;
+    left: 23vw;
+    top: 5vh;
+    width: 50vw;
+    height: 65vh;
+    border-left: 20px solid #8eb2c5;
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 4, 0.5);
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    animation-name: livroTran;
+    animation-duration: 0.5s;
+}
+
+.menuDel{
+    position: relative;
+    display: grid;
+    text-align: center;
+    left: 23vw;
+    top: 5vh;
+    width: 50vw;
+    height: 65vh;
+    border-left: 20px solid #d1313d;
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 4, 0.5);
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    animation-name: livroTran;
+    animation-duration: 0.5s;
+}
+
+.menuCadastro .button, .menuAtualiza .button{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 4, 0.2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    position: absolute;
+    font-size: 20px;
+    right: 0;
+    bottom: 0;
+    margin: 30px;
+    background-color: #f9bf76;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px;
+    transition: 0.4s;
+}
+
+.menuDel .button{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 4, 0.2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    position: absolute;
+    font-size: 20px;
+    right: 0;
+    bottom: 0;
+    margin: 30px;
+    color: white;
+    background-color: #d1313d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px;
+    transition: 0.4s;
+}
+
+.menuDel .barra{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    background: #8eb2c53d;
+    transition: 0.6s;
+}
+
+.menuDel .button:hover{
+    background-color: #a3131d;
 }
 
 .cadastro{
-    display:flex;
-    flex-direction: column;
-    justify-items: left;
-    width: 40%;
-    gap: 10px;
+    position: relative;
+    display:grid;
+    margin: 20px;
+    gap: 30px;
+    width: auto;
+    height: fit-content;
 }
+
+.cadastro > p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    font-size: 20px;
+}
+
+.cadastro > input, .cadastro > p > input{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    background: #8eb2c53d;
+    transition: 0.6s;
+}
+
+.cadastro > input:focus, .cadastro > p > input:focus, .searchId .barra:focus{
+    box-shadow: 0 0 8px 3px #8eb2c5;
+    background: #8eb2c573;
+}
+
+.cadastro > textarea{
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    background: #8eb2c53d;
+    transition: 0.6s;
+}
+
+.cadastro > textarea:focus{
+    box-shadow: 0 0 8px 3px #8eb2c5;
+    background: #8eb2c573;
+}
+
