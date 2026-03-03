@@ -1,14 +1,26 @@
 function login (event){
-    var userName = document.getElementById('user').value;
-    var password = document.getElementById('pass').value;
+    const aviso = document.getElementById('aviso');
+    const loginRequest = {
+        loginUser: document.getElementById('user').value,
+        loginPass: document.getElementById('pass').value
+    };
     event.preventDefault();
 
-    fetch(`/User/login/${userName.value}/${password.value}`) 
+    fetch(`/User`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(loginRequest)
+    })
             .then(response => {
-                if (response.status == 404)
-                alert("Não há nenhum livro com esse nome na base de dados.");
-                if (!response.ok) throw new Error("Erro na rede");
-                return response.json();
+                if (!response.ok) {
+                    aviso.innerHTML =  '<p style="color: #d1313d; animation-name: shake; animation-duration: 0.4s;"><strong>Usuário ou Senha incorreto(a).</p>'
+                }
+                if (response.ok) {
+                    aviso.innerHTML =  '<p style="color: #31d174;"><strong>Login realizado com sucesso!</p>'
+                    window.location.href = "admin.html"
+                }
             })
             .then(dados => {
                 console.log("Fez login, oloko");

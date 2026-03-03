@@ -92,9 +92,9 @@ function confirmID(element){
 
      fetch(`/Livros/porId/${element.value}`) 
         .then(response => {
-            if (response.status == 404)
-            alert("Não há nenhum livro com esse id.");
-            if (!response.ok) throw new Error("Erro na rede");
+            if (response.status == 404){
+                alert("Não há nenhum livro com esse id.");
+            } else if (!response.ok) throw new Error("Erro na rede");
             return response.json();
         })
         .then(livro => {
@@ -128,18 +128,15 @@ function cadastrar (event){
         body: JSON.stringify(novoLivro)
     })
     .then(response =>{
-        if (response.ok) 
+        if (response.ok) {
             alert("Livro Cadastrado com sucesso!");
-        
-        if (response.status == 409)
+            event.target.reset(); 
+        } else if (response.status == 409){
             alert("Esse livro já foi Cadastrado!");
+        } else{
             throw new Error("Erro na rede");
-    })
-    .then(dados => {
-        console.log("Resposta do servidor:", dados);
-        
-        event.target.reset(); 
-    })
+        }
+    })   
     .catch(error => {
         console.log(error)
         return;

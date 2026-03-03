@@ -9,7 +9,8 @@ namespace Sistema_de_Biblioteca___C_.Models
 {
     public class User
     {
-         public User() { }
+        public User() { }
+        
         [JsonPropertyName("UserId")]
         public int id { get; set; }
          

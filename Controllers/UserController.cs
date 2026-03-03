@@ -19,14 +19,13 @@ namespace Sistema_de_Biblioteca___C_.Controllers
             _context = context;
         }
 
-        [HttpGet("login/{userName}")]
-        public IActionResult Login(string userName)
+        [HttpPost]
+        public IActionResult Login([FromBody] loginRequest _user)
         {
-            var _user = new User(userName, "123456");
 
-            if (_context.users.Contains(_user))
+            if (_context.users.Any(x => x.userName == _user.loginUser && x.password == _user.loginPass))
             {
-                return Ok(_user);   
+                return Ok();   
             }
             return Unauthorized();
         }

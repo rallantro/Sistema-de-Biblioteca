@@ -135,7 +135,7 @@
     box-shadow: 0 0 8px 3px #8eb2c5;
 }
 
-.pesquisa .button:hover, .searchId .button:hover, .menuCadastro .button:hover, .menuAtualiza .button:hover{
+.pesquisa .button:hover, .searchId .button:hover, .menuCadastro .button:hover, .menuAtualiza .button:hover, .menuLogin .button:hover{
     background-color: #e5625c;
     color: white;
     box-shadow: 0 0 8px 3px #e5635caf;
@@ -195,6 +195,10 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;    
     background-color: whitesmoke;
+}
+
+.login {
+    background-color: #615375;
 }
 
 .pesquisarID, .menuCadastro, .menuAtualiza, .menuDel {
@@ -277,8 +281,6 @@ body{
     animation-duration: 1.5s;
 }
 
-
-
 .pesquisarID {
     position: relative;
     left: 15vw;
@@ -358,6 +360,73 @@ body{
     border-radius: 20px;
     animation-name: livroTran;
     animation-duration: 0.5s;
+}
+
+.menuLogin {
+    position: relative;
+    display: grid;
+    text-align: center;
+    left: 35vw;
+    top: 10vh;
+    width: 25vw;
+    height: 45vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    border-left: 20px solid #d1313d;
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 4, 0.5);
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    animation-name: livroTran;
+    animation-duration: 0.5s;
+    transition: 0.8s;
+}
+
+.menuLogin .barra{
+    background-color: #8eb2c5a9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 20px;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    transition: 0.6s;
+}
+
+.loginDados {
+    position: relative;
+    display:grid;
+    margin: 20px;
+    gap: 30px;
+    width: auto;
+    height: fit-content;
+}
+
+.menuLogin .button{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 4, 0.2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    position: absolute;
+    font-size: 20px;
+    right: 0;
+    bottom: 0;
+    margin: 30px;
+    background-color: #d1313d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px;
+    transition: 0.4s; 
+}
+
+.aviso {
+    position: absolute;
+    bottom: 3vh;
+    margin: 5px;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(2px, -2px) rotate(2deg); }
+  75% { transform: translate(-2px, 2px) rotate(-2deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
 }
 
 .menuCadastro .button, .menuAtualiza .button{

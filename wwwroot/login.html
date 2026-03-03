@@ -9,17 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="login.js" defer></script>
 </head>
-<body>
+<body class="login">
     <div class="title">
-        <h1  style="color: #d1313d;">Sistema de livros da Academia Juvia</h1>
+        <h1  style="color: #8eb2c5;">Sistema de livros da Academia Juvia</h1>
         <h2 style="color: #8eb2c5;">Por favor faça login para entrar no sistema de Administração.</h2>
         <a href="index.html"><button class="returnB">⬅</button></a>
     </div>
 
     <form onsubmit="login(event)">
         <div class="menuLogin">
-            <input id="user" type="text" required>
-            <input id="pass" type="password" required>
+            <div class="loginDados">
+                <h2 style="color: #d1313d;">Login:</h2>
+                <input class="barra" id="user" type="text" placeholder="Usuário" required>
+                <input class="barra" id="pass" type="password" placeholder="Senha" required>
+            </div>
+            <div class="aviso" id="aviso"></div>
             <button class="button" type="submit">Login</button>
         </div>
     </form>
