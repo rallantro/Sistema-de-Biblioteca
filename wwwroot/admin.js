@@ -190,7 +190,8 @@ function deletar(){
         fetch(`/Livros/${id.value}`, {
             method: 'DELETE',
             headers: {
-                'Content-Type': 'application/json' 
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem("token")}`
             },
         })
         .then(response =>{
