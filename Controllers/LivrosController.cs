@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Sistema_de_Biblioteca___C_.Context;
 using Sistema_de_Biblioteca___C_.Models;
@@ -29,7 +30,9 @@ namespace Sistema_de_Biblioteca___C_.Controllers
             return Ok(livro);
         }
 
+        
         [HttpGet("porId/{id}")]
+        [Authorize]
         public IActionResult ObterID(int id)
         {
             var livro = _context.livros.Find(id);
@@ -62,6 +65,7 @@ namespace Sistema_de_Biblioteca___C_.Controllers
             return Ok(livro);
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult cadastrarLivro([FromBody] Livro livroNovo)
         {
@@ -77,6 +81,7 @@ namespace Sistema_de_Biblioteca___C_.Controllers
             return Ok();
         }
 
+        [Authorize]
         [HttpPut]
         public IActionResult atualizarlivro([FromBody] Livro livronovo)
         {
@@ -97,6 +102,7 @@ namespace Sistema_de_Biblioteca___C_.Controllers
             return Ok();
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult delete(int id)
         {

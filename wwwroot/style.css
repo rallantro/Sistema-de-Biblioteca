@@ -46,6 +46,54 @@
     background-color: #f9bf76;
 }
 
+.errorCard {
+    position: fixed;
+    z-index: 99;
+    display: grid;
+    text-align: center;
+    left: 75vh;
+    top: 15vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    border-left: 20px solid #d1313d;
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 4, 0.5);
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    animation-name: shake;
+    animation-duration: 0.5s;
+    transition: 0.8s;
+}
+
+
+.errorCard .button{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 4, 0.2);
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+    font-size: 20px;
+    margin: 30px;
+    color: white;
+    background-color: #d1313d;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 15px;
+    transition: 0.4s;
+}
+
+.errorCard .button > a{
+    text-decoration: none;
+    color: white;
+}
+
+.ContentBlock{
+    position: fixed;
+    z-index: 98;
+    background-color: rgba(0, 0, 0, 0.658);
+    width: 150%;
+    height: 150%;
+    left: 0;
+    top: 0;
+}
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 4, 0.2);
     background-color: white;
@@ -135,7 +183,7 @@
     box-shadow: 0 0 8px 3px #8eb2c5;
 }
 
-.pesquisa .button:hover, .searchId .button:hover, .menuCadastro .button:hover, .menuAtualiza .button:hover, .menuLogin .button:hover{
+.pesquisa .button:hover, .searchId .button:hover, .menuCadastro .button:hover, .menuAtualiza .button:hover, .menuLogin .button:hover, .errorCard .button:hover{
     background-color: #e5625c;
     color: white;
     box-shadow: 0 0 8px 3px #e5635caf;
@@ -218,7 +266,7 @@ body{
     margin: 0;
     border-top-right-radius: 20px;
     transition: 0.5s;
-    z-index: 99;
+    z-index: 97;
 }
 
 .menuLateral > ul {
@@ -424,8 +472,9 @@ body{
 
 @keyframes shake {
   0% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(2px, -2px) rotate(2deg); }
-  75% { transform: translate(-2px, 2px) rotate(-2deg); }
+  25% { transform: translate(5px, -5px) rotate(2deg); }
+  50% { transform: translate(-5px, 5px) rotate(-2deg); }
+  75% { transform: translate(5px, -5px) rotate(2deg); }
   100% { transform: translate(0, 0) rotate(0deg); }
 }
 

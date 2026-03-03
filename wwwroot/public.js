@@ -12,8 +12,7 @@ function porNome(event){
         fetch(`/Livros/nome/${name.value}`) 
             .then(response => {
                 if (response.status == 404){
-                    alert("Não há nenhum livro com esse nome.");
-                    throw new Error("Erro na rede");
+                    display.innerHTML = '<p style="margin: 15px; color: #d1313d; animation-name: shake; animation-duration: 0.4s;"><strong>Não há nenhum livro com este nome.</p>';
                 }
                 
                 if (!response.ok) throw new Error("Erro na rede");
@@ -52,8 +51,7 @@ function porAutor(event){
         fetch(`/Livros/autor/${name.value}`) 
             .then(response => {
                 if (response.status == 404){
-                    alert("Não há nenhum livro com esse autor."); 
-                    throw new Error("Erro na rede");
+                     displayAutor.innerHTML = '<p style="margin: 15px; color: #d1313d; animation-name: shake; animation-duration: 0.4s;"><strong>Não há nenhum livro com este autor.</p>'
                 }
                 
                 if (!response.ok) throw new Error("Erro na rede");

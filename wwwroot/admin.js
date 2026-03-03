@@ -1,3 +1,26 @@
+function verifyLogin(){
+    const token = localStorage.getItem("token");
+    const display = document.getElementById('verify');
+    fetch('/User', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            "Authorization": `Bearer ${token}`
+        }
+    })
+    .then(response => {
+        if (!response.ok){
+            display.innerHTML =`<div class="errorCard">
+            <p style="text-align: center; color: #d1313d;"><b>Você não possui autorização para estar aqui.</b></p>
+            <p style="text-align: center; color: #d1313cb0; font-size: xxx-large;"><b>:/</b></p>
+            <button class="button"><a href="index.html">Voltar</a></button>
+        </div>
+        <div class="ContentBlock"></div>`
+        }
+    })
+
+}
+
 function buscarID(event){
         event.preventDefault();
         const name = document.getElementById('idName');
@@ -37,7 +60,13 @@ function buscarID(event){
 };
 
 function checkID(element){
-    fetch(`/Livros/porId/${element.value}`) 
+    const token = localStorage.getItem("token");
+    fetch(`/Livros/porId/${element.value}`,{
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        }
+    }) 
         .then(response => {
             if (response.status == 404)
             alert("Não há nenhum livro com esse id.");
@@ -53,6 +82,7 @@ function checkID(element){
 }
 
 function atualizar (event){
+    const token = localStorage.getItem("token");
 
     const novoLivro = {
         Id: document.getElementById('idOld').value,
@@ -67,7 +97,8 @@ function atualizar (event){
     fetch('/Livros', {
         method: 'PUT',
         headers: {
-            'Content-Type': 'application/json' 
+            'Content-Type': 'application/json',
+            "Authorization": `Bearer ${token}`
         },
         body: JSON.stringify(novoLivro)
     })
@@ -90,7 +121,13 @@ function atualizar (event){
 function confirmID(element){
     const display = document.getElementById('demDel');
 
-     fetch(`/Livros/porId/${element.value}`) 
+    const token = localStorage.getItem("token");
+    fetch(`/Livros/porId/${element.value}`,{
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
+        }
+    })
         .then(response => {
             if (response.status == 404){
                 alert("Não há nenhum livro com esse id.");
@@ -110,7 +147,7 @@ function confirmID(element){
 }
 
 function cadastrar (event){
-
+    const token = localStorage.getItem("token");
     const novoLivro = {
         Nome: document.getElementById('title').value,
         Descricao: document.getElementById('desc').value,
@@ -123,7 +160,8 @@ function cadastrar (event){
     fetch('/Livros', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json' 
+            'Content-Type': 'application/json', 
+            'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify(novoLivro)
     })

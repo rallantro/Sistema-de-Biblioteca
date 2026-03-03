@@ -1,5 +1,6 @@
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\appsettings.Development.json
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\appsettings.json
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Sistema de Biblioteca - C#.staticwebassets.runtime.json
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Sistema de Biblioteca - C#.staticwebassets.endpoints.json
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Sistema de Biblioteca - C#.exe
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Sistema de Biblioteca - C#.deps.json
@@ -9,6 +10,7 @@ D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Sis
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Azure.Core.dll
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Azure.Identity.dll
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Humanizer.dll
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Microsoft.AspNetCore.OpenApi.dll
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
@@ -141,10 +143,19 @@ D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sis
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sistema de Biblioteca - C#.csproj.CoreCompileInputs.cache
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sistema de Biblioteca - C#.MvcApplicationPartsAssemblyInfo.cs
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sistema de Biblioteca - C#.MvcApplicationPartsAssemblyInfo.cache
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sistema de Biblioteca - C#.sourcelink.json
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\rjimswa.dswa.cache.json
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\scopedcss\bundle\Sistema de Biblioteca - C#.styles.css
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\qbmkvjoeat-{0}-f4ae6ayd0h-f4ae6ayd0h.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\ahenvjr1x0-{0}-kgtaktgr4c-kgtaktgr4c.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\n3ous7yf8e-{0}-k9ckyqb2eu-k9ckyqb2eu.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\4pnrv8g11o-{0}-9szlb8zb6h-9szlb8zb6h.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\9qv3dovuyn-{0}-1f9exopahd-1f9exopahd.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\b8vkn0xyfv-{0}-c9vhhtfhof-c9vhhtfhof.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\mko83ta0sl-{0}-bcoa69j067-bcoa69j067.gz
+D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\jjdzby25hj-{0}-ogazxiq63b-ogazxiq63b.gz
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\staticwebassets.build.json
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\staticwebassets.build.json.cache
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\staticwebassets.development.json
@@ -156,13 +167,3 @@ D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\ref
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sistema de Biblioteca - C#.pdb
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sistema de Biblioteca - C#.genruntimeconfig.cache
 D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\ref\Sistema de Biblioteca - C#.dll
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\bin\Debug\net10.0\Sistema de Biblioteca - C#.staticwebassets.runtime.json
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\Sistema de Biblioteca - C#.sourcelink.json
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\b8vkn0xyfv-{0}-c9vhhtfhof-c9vhhtfhof.gz
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\qbmkvjoeat-{0}-f4ae6ayd0h-f4ae6ayd0h.gz
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\ahenvjr1x0-{0}-t8z4ls7q01-t8z4ls7q01.gz
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\mko83ta0sl-{0}-yhgfwszg1f-yhgfwszg1f.gz
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\n3ous7yf8e-{0}-gveywgscat-gveywgscat.gz
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\9qv3dovuyn-{0}-a6c2f1y0pm-a6c2f1y0pm.gz
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\4pnrv8g11o-{0}-1obxze8iau-1obxze8iau.gz
-D:\Allan\Projetos\Programação\Sistema de Biblioteca - C#\obj\Debug\net10.0\compressed\jjdzby25hj-{0}-a7qbk2oord-a7qbk2oord.gz

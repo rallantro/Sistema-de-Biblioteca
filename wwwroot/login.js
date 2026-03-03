@@ -6,7 +6,7 @@ function login (event){
     };
     event.preventDefault();
 
-    fetch(`/User`, {
+    fetch(`/User/login`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json' 
@@ -19,11 +19,16 @@ function login (event){
                 }
                 if (response.ok) {
                     aviso.innerHTML =  '<p style="color: #31d174;"><strong>Login realizado com sucesso!</p>'
-                    window.location.href = "admin.html"
+                    return response.json();
                 }
             })
             .then(dados => {
+                localStorage.setItem("token", dados.token);
+
                 console.log("Fez login, oloko");
+                setTimeout(() => {
+                    window.location.href = "admin.html";
+                }, 500);    
             })
             .catch(error => {
                 console.error("Erro ao acessar a API:", error);
