@@ -16,7 +16,6 @@ namespace Sistema_de_Biblioteca___C_.Services
     {
         public static object GerarToken(User user)
         {
-            Console.WriteLine("[TokenService] Chave usada para gerar token: " + Key.keyToken);
             var key = Encoding.UTF8.GetBytes(Key.keyToken);
             var tokenConfig = new SecurityTokenDescriptor
             {
@@ -31,7 +30,6 @@ namespace Sistema_de_Biblioteca___C_.Services
             var tokenHandler = new JwtSecurityTokenHandler();
             var token = tokenHandler.CreateToken(tokenConfig);
             var tokenString = tokenHandler.WriteToken(token);
-            Console.WriteLine("[TokenService] Token gerado: " + tokenString);
             return new
             {
                 token = tokenString

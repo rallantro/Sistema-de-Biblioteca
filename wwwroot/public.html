@@ -17,10 +17,10 @@
     </div>
 
     <div class="searchForm">
-        <form class="form" id="formSearch">
+        <form class="form" onsubmit="pesquisar(event)">
             <div class="pesquisa">
                 <p><b>Pesquisar por:</b></p>
-                <select class="dropdown" name="tipos" onchange="trocarSearch(this)" required>
+                <select id="dropdown" class="dropdown" name="tipos" onchange="trocarSearch(this)" required>
                     <option value="" disabled selected>- escolha uma opção -</option>
                     <option value="Titulo">Título</option>
                     <option value="Autor">Autor</option>

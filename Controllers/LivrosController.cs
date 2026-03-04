@@ -83,18 +83,23 @@ namespace Sistema_de_Biblioteca___C_.Controllers
 
         [Authorize]
         [HttpPut]
-        public IActionResult atualizarlivro([FromBody] Livro livronovo)
+        public IActionResult atualizarlivro([FromBody] Livro livroNovo)
         {
-            var livro = _context.livros.Find(livronovo.id);
+            var livro = _context.livros.Find(livroNovo.id);
 
             if (livro == null)
             {
                 return NotFound();
             }
 
-            livro.nome = livronovo.nome;
-            livro.desc = livronovo.desc;
-            livro.nomeAutor = livronovo.nomeAutor;
+            if (_context.livros.Any(x => x.nome.Trim() == livroNovo.nome.Trim()))
+            {
+                return Conflict();
+            }
+
+            livro.nome = livroNovo.nome;
+            livro.desc = livroNovo.desc;
+            livro.nomeAutor = livroNovo.nomeAutor;
 
             _context.Update(livro);
             _context.SaveChanges();

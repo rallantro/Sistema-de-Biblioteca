@@ -17,7 +17,6 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-Console.WriteLine("[Program] Chave usada para validar token: " + Key.keyToken);
 var key = Encoding.UTF8.GetBytes(Key.keyToken);
 
 builder.Services.AddAuthentication( x =>

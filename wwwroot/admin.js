@@ -37,8 +37,10 @@ function buscarID(event){
         }
         fetch(`/Livros/id/${name.value}`) 
             .then(response => {
-                if (response.status == 404)
-                alert("Não há nenhum livro com esse nome na base de dados.");
+                if (response.status == 404){
+                    alert("Não há nenhum livro com esse nome na base de dados.");
+                    return
+                } 
                 if (!response.ok) throw new Error("Erro na rede");
                 return response.json();
             })
@@ -110,6 +112,9 @@ function atualizar (event){
     .then(response =>{
         if (response.ok) 
             alert("Livro atualizado com sucesso!");
+        if(response.status == 409){
+            alert("Já há um livro com esse nome!");
+        }
     })
     .then(dados => {
         console.log("Resposta do servidor:", dados);
