@@ -18,7 +18,7 @@ function login (event){
                     aviso.innerHTML =  '<p style="color: #d1313d; animation-name: shake; animation-duration: 0.4s;"><strong>Usuário ou Senha incorreto(a).</p>'
                 }
                 if (response.ok) {
-                    aviso.innerHTML =  '<p style="color: #31d174;"><strong>Login realizado com sucesso!</p>'
+                    aviso.innerHTML =  '<p style="color: #31d174; animation-name: livroTran; animation-duration: 0.4s;"><strong>Login realizado com sucesso!</p>'
                     return response.json();
                 }
             })

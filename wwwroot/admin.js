@@ -13,12 +13,17 @@ function verifyLogin(){
             display.innerHTML =`<div class="errorCard">
             <p style="text-align: center; color: #d1313d;"><b>Você não possui autorização para estar aqui.</b></p>
             <p style="text-align: center; color: #d1313cb0; font-size: xxx-large;"><b>:/</b></p>
-            <button class="button"><a href="index.html">Voltar</a></button>
+            <p style="text-align: center; color: #d1313d;"><b>Faça login para entrar na área de administração.</b></p>
+            <a href="login.html"><button class="button">Login</button></a>
         </div>
         <div class="ContentBlock"></div>`
         }
     })
 
+}
+
+function logout(){
+    localStorage.clear();
 }
 
 function buscarID(event){
