@@ -20,6 +20,18 @@ O projeto foi desenvolvido com fins de aprendizado e portfólio, e o código est
 - [SQL Server](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads) (ou SQL Server Express)
 - Uma ferramenta para testar a API (opcional): [Insomnia](https://insomnia.rest/), [Postman](https://www.postman.com/)
 
+## Instalação e Execução
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/rallantro/sistema-biblioteca.git]((https://github.com/rallantro/sistema-biblioteca.git)
+
+2. **[Configure o Banco de Dados](#configuração-do-banco-de-dados)**
+   
+3. **Rode a aplicação:**
+   ```bash
+   dotnet watch run
+
 ## Estrutura de Pastas do Projeto
 
 A organização do projeto segue o padrão comum do ASP.NET Core, com separação clara entre camadas e responsabilidades. Abaixo está a descrição das principais pastas e arquivos:
@@ -113,7 +125,7 @@ O sistema não possui uma rota pública para cadastro de usuários, por padrão,
    > **Observação:**  
    > - A tabela `Users` será criada automaticamente após as migrações.  
    > - O campo `Id` é auto-incremento, portanto não precisa ser informado.  
-   > - Para este projeto de exemplo, a senha é armazenada em texto puro (sem hash), pois o foco é a demonstração das funcionalidades.  
+   > - Para este projeto de exemplo, a senha é armazenada em texto puro (sem hash), pois o foco é a demonstração das funcionalidades, o ideal é implementar BCrypt para hashing de senhas para melhorar a segurança.
    > - Você pode alterar o nome de usuário e senha conforme preferir.
 ---
 
