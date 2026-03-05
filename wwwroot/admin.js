@@ -112,9 +112,6 @@ function atualizar (event){
     .then(response =>{
         if (response.ok) 
             alert("Livro atualizado com sucesso!");
-        if(response.status == 409){
-            alert("Já há um livro com esse nome!");
-        }
     })
     .then(dados => {
         console.log("Resposta do servidor:", dados);
