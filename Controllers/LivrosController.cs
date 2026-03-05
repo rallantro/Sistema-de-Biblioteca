@@ -92,11 +92,6 @@ namespace Sistema_de_Biblioteca___C_.Controllers
                 return NotFound();
             }
 
-            if (_context.livros.Any(x => x.nome.Trim() == livroNovo.nome.Trim()))
-            {
-                return Conflict();
-            }
-
             livro.nome = livroNovo.nome;
             livro.desc = livroNovo.desc;
             livro.nomeAutor = livroNovo.nomeAutor;
