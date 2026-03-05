@@ -450,7 +450,7 @@ Os nomes das propriedades no JSON devem respeitar a capitalização definida nos
 
 ## Front-end: Estrutura e Funcionalidades
 
-O front-end foi desenvolvido com **HTML5**, **CSS3** e **JavaScript puro**, seguindo uma abordagem de múltiplas páginas (MPA – Multiple Page Application). Cada página tem uma responsabilidade bem definida, e a comunicação com a API é feita através da API Fetch, utilizando JSON para o tráfego de dados.
+O front-end foi desenvolvido com **HTML5**, **CSS3** e **JavaScript puro**, seguindo uma abordagem de múltiplas páginas (MPA – Multiple Page Application). Cada página tem uma responsabilidade bem definida, e a comunicação com a API é feita através da API nativa do JavaScript, Fetch, utilizando JSON para o tráfego de dados.
 
 ### Estrutura de Páginas
 
