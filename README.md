@@ -691,7 +691,7 @@ function showCad() {
 
 ###  Estilização (`style.css`)
 
-O arquivo CSS define uma identidade visual consistente, com uma paleta de cores que remete à "Academia Juvia" (tons de vermelho `#d1313d`, azul `#8eb2c5` e roxo `#615375`). Destaques:
+O arquivo CSS define uma identidade visual consistente, com uma paleta de cores que remete à uma academia fictícia criada para este projeto, a "Academia Juvia": (tons de vermelho `#d1313d`, azul `#8eb2c5` e roxo `#615375`). Destaques:
 
 - **Animações:** `livroTran` (fade-in com deslocamento) e `shake` (treme o elemento) são usadas para feedback visual.
 - **Cards de livros:** possuem sombra, borda lateral vermelha e efeito de elevação ao passar o mouse.
