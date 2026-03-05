@@ -614,7 +614,7 @@ function login (event) {
 
 ---
 
-### 🛠️ Painel Administrativo (`admin.html` e `admin.js`)
+### Painel Administrativo (`admin.html` e `admin.js`)
 
 Esta é a página mais complexa do sistema. Ela apresenta um menu lateral com quatro operações: **Pesquisar ID**, **Cadastrar Livro**, **Atualizar Livro** e **Deletar Livro**. Apenas uma seção é exibida por vez, controlada pelas funções `showID()`, `showCad()`, `showAtt()` e `showDel()`.
 
@@ -663,7 +663,7 @@ O usuário informa o ID do livro. Ao digitar o ID, a função `checkID()` é aci
 **4. Deletar Livro**  
 Semelhante à atualização: ao digitar o ID, uma pré‑visualização do livro é exibida (através de `confirmID()`). O botão "Deletar" só aparece após a validação. Ao clicar, uma caixa de confirmação é exibida e, se confirmado, uma requisição `DELETE /Livros/{id}` é enviada.
 
-![Demonstração da Atualização](img/demoAtt.gif)
+![Demonstração de Deletar](img/demoDel.gif)
 
 #### Controle de visibilidade das seções
 
