@@ -181,7 +181,7 @@ public class TokenService
 }
 ```
 
-- A chave secreta (`Key.keyToken`) está definida em `Key.cs` (apenas para fins de exemplo).
+- A chave secreta (`Key.keyToken`) está definida em `Key.cs` (apenas para fins de exemplo, o ideal é usar variáveis de ambiente ou user-secrets para armazenar a chave).
 - O token expira após 9 horas e carrega apenas o `userID` como *claim*.
 
 ### 2. Configuração da Autenticação (Program.cs)
