@@ -24,7 +24,7 @@ O projeto foi desenvolvido com fins de aprendizado e portfólio, e o código est
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/rallantro/sistema-biblioteca.git]((https://github.com/rallantro/sistema-biblioteca.git)
+   git clone [https://github.com/rallantro/sistema-biblioteca.git](https://github.com/rallantro/sistema-biblioteca.git)
 
 2. **[Configure o Banco de Dados](#configuração-do-banco-de-dados)**
    
