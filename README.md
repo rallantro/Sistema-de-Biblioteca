@@ -1,6 +1,18 @@
 
 # Sistema de Biblioteca – API e Front-end
 
+![.NET 10](https://img.shields.io/badge/.NET%2010-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+---
+
+[![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
+![Status do Projeto](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen?style=flat-square)
+![GitHub Repo Size](https://img.shields.io/github/repo-size/rallantro/sistema-biblioteca?style=flat-square)
+
 Este é um sistema de gerenciamento de biblioteca desenvolvido em **.NET 10**  e **Entity Framework Core**, utilizando **SQL Server** como banco de dados. O sistema oferece uma interface web pública para consulta de livros e uma área administrativa protegida por autenticação JWT para operações de CRUD (criar, atualizar, deletar) no acervo.
 
 O projeto foi desenvolvido com fins de aprendizado e portfólio, e o código está disponível publicamente para estudo e referência.
